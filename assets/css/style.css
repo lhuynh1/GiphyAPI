@@ -29,10 +29,32 @@ h1 {
     width: 900pt;
     margin: 10pt;
 }
+.gif {
+    margin: 5pt;
+}
+
+.ratingArea {
+    width: 160pt;
+    background: rgb(28, 173, 209);
+    color: white;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 5pt;
+}
 
 #formArea {
     width: 400pt;
     margin-right: 10pt;
     padding: 10pt;
+}
+
+#addlabel {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 35pt;
+    text-align: center;
+}
+
+#food-input {
+    margin: 10pt;
 }
 

@@ -37,8 +37,8 @@ $('#buttonArea').on("click", ".foodbtn", function(){
    
        var p = $('<p>').text('Rating: ' + foodResults[i].rating).addClass('ratingArea');
    
-       // create an img tag for gifs to store all the attributes + class of gif size to make them all the same size
-       var foodImg = $('<img>').addClass('gifSize');
+       // create an img tag for gifs to store all the attributes + class of gif for styling
+       var foodImg = $('<img>').addClass('gif');
    
        // add the data attributes for animate and still to be used later in an on click function
        foodImg.attr('src', foodResults[i].images.fixed_height_still.url);
@@ -49,8 +49,8 @@ $('#buttonArea').on("click", ".foodbtn", function(){
 
    
    
-       $('#gifArea').append(p);
-       $('#gifArea').append(foodImg);
+       $('#gifArea').prepend(p);
+       $('#gifArea').prepend(foodImg);
 
     //    $('#newGifs').prepend(foodImg);
         }
@@ -58,8 +58,8 @@ $('#buttonArea').on("click", ".foodbtn", function(){
 
 });
 
-$('#gifArea').on("click", ".gifSize", function(event){
-    event.preventDefault();
+$('#gifArea').on("click", ".gif", function(){
+    // event.preventDefault();
 
     // current state of clicked gif // class attribute that was added above in the foodImg var
     var state = $(this).attr("data-state");
@@ -69,13 +69,24 @@ $('#gifArea').on("click", ".gifSize", function(event){
         $(this).attr('src', $(this).attr('data-animate'));
         $(this).attr('data-state', 'animate');
     } else {
-        $(this).attr('src', $(this).attr('food-still'));
+        $(this).attr('src', $(this).attr('data-still'));
         $(this).attr('data-state', 'still');
     }
     
 });
 
-// 
+
+$('#submit').on('click', function(event){
+    event.preventDefault();
+    // storing the user input into a variable
+    var newFood = $('#food-input').val();
+
+    // grabbing that input and pushing it into the array of food
+    foodArray.push(newFood);
+
+    // call the button function to generate new buttons for those new foods
+    makeButtons();
+});
 
 
 
