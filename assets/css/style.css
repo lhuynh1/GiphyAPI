@@ -1,0 +1,38 @@
+h1 {
+    font-size: 65pt;
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin-right: 25pt;
+}
+
+.jumbotron {
+    border-bottom: solid 3pt;
+
+}
+
+.foodGifs {
+    width: 150pt;
+    height: 110pt;
+    margin-left: 20pt;
+    padding: 5pt;
+}
+
+#buttonArea {
+    width: 900pt;
+    margin: 10pt;
+}
+
+.foodbtn {
+    margin: 10pt;
+}
+
+#gifArea {
+    width: 900pt;
+    margin: 10pt;
+}
+
+#formArea {
+    width: 400pt;
+    margin-right: 10pt;
+    padding: 10pt;
+}
+
