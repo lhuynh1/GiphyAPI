@@ -45,13 +45,17 @@ h1 {
 #formArea {
     width: 400pt;
     margin-right: 10pt;
+    margin-left: 400pt;
     padding: 10pt;
 }
+
+
 
 #addlabel {
     font-family: 'Love Ya Like A Sister', cursive;
     font-size: 35pt;
     text-align: center;
+    margin: 15pt;
 }
 
 #food-input {

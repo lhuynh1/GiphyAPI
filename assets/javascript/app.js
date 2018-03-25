@@ -12,8 +12,25 @@ for (var i = 0; i < foodArray.length; i++){
     
     }
 }
-
 makeButtons();
+
+
+// on click function for submit button that grabs user input to dynamically create a new button
+$('#submit').on('click', function(event){
+    event.preventDefault();
+
+  
+    // storing the user input into a variable
+    var newFood = $('#food-input').val().trim();
+
+    // grabbing that input and pushing it into the array of food
+    foodArray.push(newFood);
+
+    // call the button function to generate new buttons for new foods based on user input
+    makeButtons();
+});
+
+
 
 // on click function that generates gifs through giphy API
 $('#buttonArea').on("click", ".foodbtn", function(){
@@ -73,37 +90,7 @@ $('#gifArea').on("click", ".gif", function(){
         $(this).attr('data-state', 'still');
     }
     
-});
-
-
-$('#submit').on('click', function(event){
-    event.preventDefault();
-    // storing the user input into a variable
-    var newFood = $('#food-input').val();
-
-    // grabbing that input and pushing it into the array of food
-    foodArray.push(newFood);
-
-    // call the button function to generate new buttons for those new foods
-    makeButtons();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  });
 
 
 
